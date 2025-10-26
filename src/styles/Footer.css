@@ -1,0 +1,122 @@
+/* Footer.css */
+:root {
+    --black: #0a0a0a;
+    --dark-gray: #1a1a1a;
+    --medium-gray: #2a2a2a;
+    --light-gray: #3a3a3a;
+    --white: #ffffff;
+    --cream: #f5f1e8;
+    --light-cream: #faf8f3;
+    --brown: #8b7355;
+    --dark-brown: #6b5a3f;
+    --light-brown: #a89070;
+    --gold: #d4af37;
+    --green: #10b981;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+}
+
+.footer {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(139, 115, 85, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: var(--cream);
+    opacity: 0.7;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.made-with {
+    color: var(--cream);
+    opacity: 0.7;
+    margin: 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 400;
+}
+
+.heart {
+    color: #ef4444;
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-container {
+        padding: 0 1.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .copyright,
+    .made-with {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 1rem;
+    }
+
+    .copyright,
+    .made-with {
+        font-size: 0.8rem;
+    }
+}

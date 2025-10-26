@@ -1,0 +1,125 @@
+/* Navbar principal (específico para evitar overrides de Bootstrap) */
+.site-navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100 !important;
+    background-color: rgba(31, 29, 25, 0.95) !important;
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 2rem !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.25s ease;
+    overflow: visible !important;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Marca (nombre) */
+.site-navbar .navbar-brand {
+    color: #83684b !important;
+    /* café claro */
+    font-size: 2.3rem !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    overflow: visible;
+    display: inline-block;
+    transition: color 0.25s ease;
+}
+
+.site-navbar .navbar-brand:hover {
+    color: #e0b98a !important;
+}
+
+/* Links */
+.site-navbar .navbar-nav {
+    gap: 2.5rem;
+}
+
+.site-navbar .nav-link {
+    color: #c7bfb5 !important;
+    font-size: 1.1rem !important;
+    font-weight: 400;
+    padding: 0.4rem 0 !important;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.site-navbar .nav-link:hover {
+    color: #C49A6C !important;
+    transform: translateY(-2px);
+}
+
+.site-navbar .nav-link.active {
+    color: #C49A6C !important;
+}
+
+/* Toggler */
+.site-navbar .navbar-toggler {
+    border: 2px solid #C49A6C !important;
+    padding: 0.5rem 0.7rem !important;
+    background-color: transparent !important;
+    border-radius: 6px !important;
+}
+
+.site-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.3rem rgba(196, 154, 108, 0.25) !important;
+    outline: none !important;
+}
+
+.site-navbar .navbar-toggler:hover {
+    background-color: rgba(196, 154, 108, 0.12) !important;
+    border-color: #ffffff !important;
+}
+
+/* Icono del toggler */
+.site-navbar .navbar-toggler-icon {
+    width: 28px !important;
+    height: 28px !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C49A6C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Estado scrolled — clase añadida por JS */
+.site-navbar.scrolled {
+    background-color: rgba(10, 8, 6, 1) !important;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7) !important;
+    padding: 1rem 3rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .site-navbar {
+        padding: 1rem 1.5rem !important;
+    }
+
+    .site-navbar.scrolled {
+        padding: 0.7rem 1.5rem !important;
+    }
+
+    .site-navbar .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.98);
+        padding: 1.2rem;
+        margin-top: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+    }
+
+    .site-navbar .nav-link {
+        font-size: 1rem !important;
+        padding: 0.8rem 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-navbar {
+        padding: 0.9rem 1rem !important;
+    }
+
+    .site-navbar .navbar-brand {
+        font-size: 1.6rem !important;
+    }
+
+    .site-navbar .nav-link {
+        font-size: 0.95rem !important;
+    }
+}

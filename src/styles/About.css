@@ -1,0 +1,672 @@
+/* About.css - Completamente Responsive */
+:root {
+    --black: #0a0a0a;
+    --dark-gray: #1a1a1a;
+    --medium-gray: #2a2a2a;
+    --light-gray: #3a3a3a;
+    --white: #ffffff;
+    --cream: #f5f1e8;
+    --light-cream: #faf8f3;
+    --brown: #8b7355;
+    --dark-brown: #6b5a3f;
+    --light-brown: #a89070;
+    --gold: #d4af37;
+}
+
+.about {
+    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--black) 100%);
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Section - Responsive */
+.about-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--brown), transparent);
+    max-width: 80px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 0.9rem;
+    color: var(--cream);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.4;
+    padding: 0 0.5rem;
+}
+
+/* Main Content */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Profile Grid - Responsive */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    border-color: rgba(139, 115, 85, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 115, 85, 0.1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+}
+
+.card-icon {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(139, 115, 85, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    color: var(--cream);
+    font-size: 1rem !important;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.highlight-tag {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-top: 0.8rem;
+}
+
+.highlight-tag span {
+    color: var(--gold);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+/* Hobbies Carousel - Responsive */
+.hobbies-carousel {
+    margin-top: 1rem;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--dark-gray);
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--brown);
+    border-radius: 50%;
+    color: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-arrow:hover {
+    background: var(--brown);
+    color: var(--black);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hobby-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobby-image {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobby-image img {
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.hobby-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.hobby-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.hobby-image:hover img {
+    transform: scale(1.05);
+}
+
+.hobby-image:hover .hobby-overlay {
+    background: rgba(10, 10, 10, 0.6);
+}
+
+.hobby-image:hover .hobby-icon {
+    opacity: 1;
+}
+
+.hobby-info {
+    height: 30%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hobby-info h4 {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.hobby-info p {
+    color: var(--cream);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--brown);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: var(--gold);
+}
+
+/* Philosophy Section - Responsive */
+.philosophy-section {
+    background: rgba(139, 115, 85, 0.05);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.philosophy-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.philosophy-icon {
+    font-size: 1.8rem;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.philosophy-text h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.philosophy-text p {
+    color: var(--cream);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Values Section - Responsive */
+.values-section {
+    background: rgba(139, 115, 85, 0.05);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.values-title {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Values Carousel - Responsive */
+.values-carousel {
+    margin-top: 0.8rem;
+}
+
+.values-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.values-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--brown);
+    border-radius: 50%;
+    color: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.values-arrow:hover {
+    background: var(--brown);
+    color: var(--black);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.values-prev {
+    left: 8px;
+}
+
+.values-next {
+    right: 8px;
+}
+
+.values-carousel-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.value-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-slide-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    text-align: left;
+}
+
+.value-icon-large {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.value-text h4 {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.value-text p {
+    color: var(--cream);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.values-carousel-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;
+    z-index: 10;
+}
+
+.values-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.values-dot.active {
+    background: var(--brown);
+    transform: scale(1.2);
+}
+
+.values-dot:hover {
+    background: var(--gold);
+}
+
+/* Ocultar la grid original de valores */
+.values-grid {
+    display: none;
+}
+
+/* RESPONSIVE BREAKPOINTS MEJORADOS */
+@media (min-width: 768px) {
+    .about {
+        padding: 4rem 0;
+    }
+
+    .about-container {
+        padding: 0 1.5rem;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .carousel-container {
+        height: 350px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .philosophy-section {
+        padding: 1.5rem 2rem;
+    }
+
+    .values-section {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+        padding: 6rem 0;
+    }
+
+    .carousel-container {
+        height: 400px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .profile-card {
+        padding: 2rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .hobby-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .hobby-info p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 2rem 0;
+    }
+
+    .about-container {
+        padding: 0 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .profile-card {
+        padding: 1rem;
+    }
+
+    .carousel-container {
+        height: 250px;
+    }
+
+    .carousel-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hobby-icon {
+        font-size: 2rem;
+    }
+
+    .values-carousel-container {
+        height: 100px;
+    }
+
+    .value-slide-content {
+        padding: 0 1rem;
+        gap: 0.8rem;
+    }
+
+    .value-icon-large {
+        font-size: 1.8rem;
+    }
+
+    .values-arrow {
+        width: 25px;
+        height: 25px;
+    }
+
+    .philosophy-content {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .philosophy-icon {
+        font-size: 1.5rem;
+    }
+
+    .philosophy-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .philosophy-text p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .carousel-container {
+        height: 220px;
+    }
+
+    .hobby-info {
+        padding: 0.6rem;
+    }
+
+    .hobby-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .hobby-info p {
+        font-size: 0.7rem;
+    }
+
+    .values-carousel-container {
+        height: 90px;
+    }
+
+    .value-text h4 {
+        font-size: 0.9rem;
+    }
+
+    .value-text p {
+        font-size: 0.7rem;
+    }
+}
